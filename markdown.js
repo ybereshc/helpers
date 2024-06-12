@@ -1,5 +1,5 @@
 import md from 'md';
-import {poolLoader} from '../index';
+// import {poolLoader} from '../index';
 
 export const parseCustomMarkdown = ( str ) => {
 	var types = {
@@ -20,7 +20,7 @@ export const parseCustomMarkdown = ( str ) => {
 			attrs = Array.from( doc.documentElement.attributes ).reduce( ( obj, attr ) => ( obj[ attr.name ] = attr.value, obj ), {} );
 
 			if ( type === 'img' || type === 'video' ) {
-				url = poolLoader.getUrl( url );
+				// url = poolLoader.getUrl( url );
 			}
 
 			attrs = { ...types[ type ], ...attrs, src: url };
